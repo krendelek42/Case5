@@ -33,4 +33,4 @@ with open('input.txt', 'r') as f_in:
             part_PR = text.find('passingPasserRating')
             PR = text[text.find('>', part_PR) + 25:text.find('<', part_PR) - 22]
 
-            print(name, COMP, ATT, YDS, TD, INT, PR, file = out_f)
+            print(out_f.writelines('{0:<20} {1:<7} {2:<7} {3:<7} {4:<7} {5:<7} {6:<7.2f}\n'.format(name, COMP, ATT, YDS, TD, INT, PR)))
