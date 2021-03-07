@@ -1,6 +1,6 @@
 """Case-study #4 Парсинг web-страниц
 Разработчики:
-Докукина К.А.  Назирова Е.С.
+Докукина К.А. 60%  Назирова Е.С. 40%
 
 """
 
@@ -13,7 +13,7 @@ with open('input.txt', 'r') as f_in:
             s = f.read()
             text = str(s)
             part_name = text.find("nfl-c-player-header__title")
-            name = int(text[text.find('>', part_name) + 1:text.find('</h1', part_name)])
+            name = text[text.find('>', part_name) + 1:text.find('</h1', part_name)]
 
             part_COMP = text.find('passingCompletions')
             COMP = int(text[text.find('>', part_COMP) + 25:text.find('<', part_COMP) - 22])
